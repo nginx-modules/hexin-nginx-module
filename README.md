@@ -10,6 +10,7 @@ hexin-nginx-module
   到后台进行存储。
         使用方式:
           nginx.conf
+          
               /scribe {
                   error_log  logs/error.log debug;	
 	
