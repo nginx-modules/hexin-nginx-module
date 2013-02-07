@@ -40,7 +40,7 @@ hexin-nginx-module
   
             upstream percn_test {
             		server 192.168.27.23:8088;
-                #server 192.168.27.23:8081;
+                #server 192.168.27.7:8081;
             }
 
             location /percn {	
@@ -60,7 +60,7 @@ hexin-nginx-module
             		set_form_input $stationTypes;
             		set_form_input $stationCodes;
 
-            		set $block_size 2;
+            		set $block_size 100;
             		set $common "&msgId=$msgId&sender=$sender&createTime=$createTime&liveTime=$liveTime&title=&title&content=$content&format=$format&msgType=$msgType&blackList=$blackList&blackListType=$blackListType&stationTypes=$stationTypes&stationCodes=$stationCodes";
             
             		percn_pass percn_test;
