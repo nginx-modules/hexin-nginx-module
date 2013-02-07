@@ -3,8 +3,9 @@ hexin-nginx-module
 
 存放nginx开发的组件
 
-  scribe\n
-  =========\n
+  scribe
+  ===================
+  
   nginx通过调用python 脚本实现 scribe的客户端功能。\n
   外部通过发起http请求将需要记录的信息发送给nginx,nginx通过python客户端(启动时会与scribe服务端建立tcp连接)脚本将数据写入
   到后台进行存储。\n
