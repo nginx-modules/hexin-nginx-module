@@ -1,7 +1,6 @@
-
 /*
  * author by yinhongzhan@myhexin.com
- * 
+ *  
  */
 #include <ngx_config.h>
 #include <ngx_core.h>
@@ -136,14 +135,14 @@ static ngx_int_t hexin_http_scribe_handler(ngx_http_request_t *r)
 
 	rc = ngx_http_discard_request_body(r);
 
-    if (rc != NGX_OK) {
-        return rc;
-    }
+    	if (rc != NGX_OK) {
+        	return rc;
+    	}
 	ngx_log_debug0(NGX_LOG_DEBUG_HTTP, r->connection->log, 0, "discard body..");
 
-    if (ngx_http_set_content_type(r) != NGX_OK) {
-        return NGX_HTTP_INTERNAL_SERVER_ERROR;
-    }   
+    	if (ngx_http_set_content_type(r) != NGX_OK) {
+        	return NGX_HTTP_INTERNAL_SERVER_ERROR;
+    	}   
 
 	hexin_http_scribe_loc_conf_t  *plcf;
 	plcf = ngx_http_get_module_loc_conf(r, hexin_http_scribe_module);
